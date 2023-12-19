@@ -1,0 +1,19 @@
+----------------------------------------------------------------
+Mon Dec 18 16:59:08 BRT 2023:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-018c-7e82-c282-0000032b6240 
+on database directory /home/klausmerini/git/repository/derbyAgenda/agendaDerby with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca 
+Loaded from file:/home/klausmerini/git/repository/derbyAgenda/libs/derby.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=17.0.9+9
+user.dir=/home/klausmerini/git/repository/derbyAgenda
+os.name=Linux
+os.arch=amd64
+os.version=5.0.11
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Mon Dec 18 16:59:08 BRT 2023: Shutting down Derby engine
+----------------------------------------------------------------
+Mon Dec 18 16:59:08 BRT 2023:
+Shutting down instance a816c00e-018c-7e82-c282-0000032b6240 on database directory /home/klausmerini/git/repository/derbyAgenda/agendaDerby with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca 
+----------------------------------------------------------------
