@@ -1,50 +1,50 @@
 package com.merini.derbyAgenda.modelo;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
 
 import java.io.Serializable;
 import java.util.Collection;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+//import javax.persistence.Basic;
+//import javax.persistence.Column;
+//import javax.persistence.Entity;
+//import javax.persistence.Id;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToMany;
+//import javax.persistence.ManyToOne;
+//import javax.persistence.NamedQueries;
+//import javax.persistence.NamedQuery;
+//import javax.persistence.OneToMany;
+//import javax.persistence.Table;
 
 /**
  *
  * @author Klaus
  */
-@Entity
-@Table(name = "classificacao")
-@NamedQueries({
-    @NamedQuery(name = "Classificacao.findAll", query = "SELECT c FROM Classificacao c")})
+//@Entity
+//@Table(name = "classificacao")
+//@NamedQueries({
+//    @NamedQuery(name = "Classificacao.findAll", query = "SELECT c FROM Classificacao c")})
 public class Classificacao implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @Id
-	@GeneratedValue(strategy=GenerationType.AUTO)	
+//    @Id
+//	@GeneratedValue(strategy=GenerationType.AUTO)	
     private Integer idclassificacao;
 
 //    @JoinColumn(name = "idagenda", referencedColumnName = "idagenda")
 //    @ManyToOne
 //    private Agenda agenda;
         
-    @Column(name = "nomeclassificacao")
+//    @Column(name = "nomeclassificacao")
     private String nomeclassificacao;
     
-    @Column(name = "cor")
+  //  @Column(name = "cor")
     private String cor;
     
-    @Column(name = "descricao")
+   // @Column(name = "descricao")
     private String descricao;
     
 //    @OneToMany(mappedBy = "idpendencia")

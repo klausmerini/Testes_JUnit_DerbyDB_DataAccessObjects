@@ -1,19 +1,19 @@
 ----------------------------------------------------------------
-Fri Nov 03 16:29:51 BRT 2023:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-018b-96a9-c79b-000003374210 
-on database directory /home/klausmerini/eclipse-workspace/derbyAgenda/agendaDerby with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca 
-Loaded from file:/home/klausmerini/eclipse-workspace/derbyAgenda/libs/derby.jar
+Mon Feb 19 16:40:35 BRT 2024:
+ Inicializando o Derby versão The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instância a816c00e-018d-c2e2-6c72-000000963370
+no diretório de banco de dados /home/klausmerini/git/repository/derbyAgenda/agendaDerby 
+
 java.vendor=Eclipse Adoptium
 java.runtime.version=17.0.9+9
-user.dir=/home/klausmerini/eclipse-workspace/derbyAgenda
+user.dir=/home/klausmerini/git/repository/derbyAgenda
 os.name=Linux
 os.arch=amd64
 os.version=5.0.11
 derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
+Carregador de classe do banco de dados iniciado - derby.database.classpath=''
 ----------------------------------------------------------------
-Fri Nov 03 16:29:52 BRT 2023: Shutting down Derby engine
+Mon Feb 19 16:40:36 BRT 2024: Shutting down Derby engine
 ----------------------------------------------------------------
-Fri Nov 03 16:29:52 BRT 2023:
-Shutting down instance a816c00e-018b-96a9-c79b-000003374210 on database directory /home/klausmerini/eclipse-workspace/derbyAgenda/agendaDerby with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@531d72ca 
+Mon Feb 19 16:40:37 BRT 2024:
+Encerrando a instância a816c00e-018d-c2e2-6c72-000000963370
 ----------------------------------------------------------------

@@ -2,13 +2,13 @@ package com.merini.derbyAgenda.dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
+//import javax.persistence.EntityManager;
 
 import com.merini.derbyAgenda.modelo.Comentario;
 
 public abstract class DAOAbstrato //implements FacadeInterf
 {
-	protected static EntityManager em ;		
+//	protected static EntityManager em ;		
 	protected static com.merini.derbyAgenda.modelo.Comentario c = new Comentario();
 	
 	
@@ -18,14 +18,8 @@ public abstract class DAOAbstrato //implements FacadeInterf
 	}
 
 
-//	@Override
-	public abstract Object carregar(Integer id);
-
-
-//	@Override
-	public abstract void excluir(Object entidade) ;
-
-
+	public abstract void editar(Object objeto) ;
+	
 //	@Override
 	public void excluir(Integer id) 
 	{		// TODO Auto-generated method stub
@@ -44,10 +38,8 @@ public abstract class DAOAbstrato //implements FacadeInterf
 
 
 //	@Override
-	public List obterTodosNomes() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract List obterTodosNomes() ;
+	
 
 
 //	@Override
@@ -63,5 +55,10 @@ public abstract class DAOAbstrato //implements FacadeInterf
 		return null;
 	}
 
+
+	public Object carregar(String nomeClasssificacao) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
