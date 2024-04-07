@@ -2,6 +2,10 @@ package com.merini.derbyAgenda.comando.item;
 
 import java.util.ArrayList;
 
+import com.merini.derbyAgenda.dao.DAOAbstrato;
+import com.merini.derbyAgenda.dao.ItemDAO;
+import com.merini.derbyAgenda.dao.ItemlistaDAO;
+import com.merini.derbyAgenda.dao.ListaDAO;
 import com.merini.derbyAgenda.modelo.Comentario;
 import com.merini.derbyAgenda.modelo.Item;
 import com.merini.derbyAgenda.modelo.Itemlista;
@@ -12,6 +16,7 @@ public class ComandoIncluirItem //extends ItemCommand
 {
 //	static ComandoIncluirItem controle;
 	public static JanelaAdicionaItem janelaAdicionaItem ;
+	public static ItemDAO dao = new ItemDAO();
 	Comentario c = new Comentario();	
 	
 	public ComandoIncluirItem() 
@@ -50,11 +55,12 @@ public class ComandoIncluirItem //extends ItemCommand
 		
 		if (comando.equals("inclui item no banco de dados"))
 		{
-//			c.comentaValor("nome dalista selecionada na combo ", nomeLista);
-//			Item itemIncluido = (Item) facadeItem.gravar(item);
-//			Lista lista = facadeLista.recuperaPorNome(nomeLista);
-//			Itemlista itemL = new Itemlista(itemIncluido ,lista);
-//			facadeItLi.gravar(itemL);			
+			ItemlistaDAO daoIL = new ItemlistaDAO();
+				c.comentaValor("nome dalista selecionada na combo ", nomeLista);
+			Item itemIncluido = (Item) dao.gravar(item);
+			ListaDAO daoL = new ListaDAO();
+			Lista lista = (Lista) daoL .carregar(nomeLista);
+			daoIL.gravar(Integer.valueOf(lista.getIdlista()),itemIncluido.getIdItem());
 //
 //			try 
 //			{		
@@ -74,11 +80,13 @@ public class ComandoIncluirItem //extends ItemCommand
 	
 	public String[] recuperaNomesDasListas()
 	{
-		ArrayList<String> arrayNomesListas = new ArrayList<String>();
-		arrayNomesListas.add("Caderno do monstro");
-		arrayNomesListas.add("Cadrno da moto");
-		arrayNomesListas.add("CAderno cinza grosso");		
-//		ArrayList<String> arrayNomesListas = (ArrayList<String>) facadeLista.obterTodosNomes();
+//		ArrayList<String> arrayNomesListas = new ArrayList<String>();
+		ListaDAO listadao = new ListaDAO();
+		
+//		arrayNomesListas.add("Caderno do monstro");
+//		arrayNomesListas.add("Cadrno da moto");
+//		arrayNomesListas.add("CAderno cinza grosso");		
+		ArrayList<String> arrayNomesListas = (ArrayList<String>) listadao.obterTodosNomes();
 		String[] arrayNomeClSt =  arrayNomesListas.toArray(new String[arrayNomesListas.size()]);
 		return arrayNomeClSt;		
 	}

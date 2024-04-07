@@ -11,6 +11,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.merini.derbyAgenda.comando.item.ComandoIncluirItem;
+import com.merini.derbyAgenda.comando.lista.ComandoExibeListas;
+import com.merini.derbyAgenda.comando.lista.ComandoIncluirLista;
 import com.merini.derbyAgenda.modelo.Comentario;
 import com.merini.derbyAgenda.modelo.Item;
 import com.merini.derbyAgenda.view.JanelaCrud;
@@ -37,7 +39,7 @@ public class JanelaAdicionaItem extends JanelaCrud implements  ActionListener
 	private static String listasDaCombo[] ;//= {"Atividade F�sica", "Casa", "Comercial", "Entretenimento",		"Estudo", "Pessoal", "Refei��o", "Trabalho"};
 	private String nomeListaDoItemSt="";
 	
-	private JButton adicalistaButton = new JButton("Adicionar � tipo de lista");
+	private JButton adicalistaButton = new JButton("Adicionar lista");
 	private JButton salvarButton = new JButton("salvar");
 	private JButton listaComprasButton = new JButton("Lista de Compras");
 	
@@ -78,22 +80,24 @@ public class JanelaAdicionaItem extends JanelaCrud implements  ActionListener
 				
 			if (janelaEdicao) 
 			{
-			//	Item item = montaItem();
 		//		ComandoEditarItem comando = cp.getComandoEditarItem();
 			//	comando.processaComando("Persiste altera��o do item no banco de dados", i);
 			}
 			else
 			{
-	//			ComandoIncluirItem comando = new ComandoIncluirItem();
-		//		comando.processaComando("inclui item no banco de dados", i,comboListas.getSelectedItem().toString());	
-			//	this.dispose();
+				ComandoIncluirItem comando = new ComandoIncluirItem();
+				comando.processaComando("inclui item no banco de dados", i,comboListas.getSelectedItem().toString());	
+				this.dispose();
+				ComandoExibeListas comando2 = new ComandoExibeListas();
+				comando2.processaComando("Exibe Lista selecionada", comboListas.getSelectedItem().toString());	
 			}
 		}		
 		if (e.getSource().equals(adicalistaButton))
 		{
 			c.comentaLocalizacao("actionPerformed");
-			ComandoIncluirItem comando = new ComandoIncluirItem();
-			comando.processaComando("Constr�i interface - Relaciona item a tipo", "");		
+			ComandoIncluirLista  comando = new ComandoIncluirLista();
+			this.dispose();
+			comando.processaComando("Constroi interface inclui lista");		
 		}
 		if (e.getSource().equals(listaComprasButton))
 		{
@@ -136,7 +140,7 @@ public class JanelaAdicionaItem extends JanelaCrud implements  ActionListener
 
 	public void montaComboListas()
 	{
-		comboListas = new JComboBox<>(listasDaCombo);
+		comboListas = new JComboBox<String>(listasDaCombo);
 		setaComboLista();		
 	}	
 	

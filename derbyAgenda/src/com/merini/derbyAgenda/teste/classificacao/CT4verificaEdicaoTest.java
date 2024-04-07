@@ -19,7 +19,7 @@ public class CT4verificaEdicaoTest
 		ClassificacaoDAO dao = new ClassificacaoDAO();
 		Date date = new Date();
 		String horaSt= String.valueOf(date.getTime());
-		String nomeClasssificacaoSt = "Entretenimento 6";
+		String nomeClasssificacaoSt = "Atividade Fisica";
 		System.out.println("carregar "+nomeClasssificacaoSt);
 
 		try {

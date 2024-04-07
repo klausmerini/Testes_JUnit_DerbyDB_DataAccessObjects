@@ -1,46 +1,23 @@
 package com.merini.derbyAgenda.modelo;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-
 /**
  *
  * @author Klaus
  */
-@Entity
-@Table(name = "itemlista")
-@NamedQueries({
-    @NamedQuery(name = "Itemlista.findAll", query = "SELECT i FROM Itemlista i")})
-public class Itemlista implements Serializable {
 
-  //  private static final long serialVersionUID = 1L;
-    @Id
-  	@GeneratedValue(strategy=GenerationType.AUTO)
+public class Itemlista implements Serializable 
+{  
     private Integer iditemlista;
     
-    @Column(name = "qtd")
     private Integer qtd;
     
     private String lugar;
     
     private String classificacao;
     
-    @JoinColumn(name = "iditem", referencedColumnName = "iditem")
-    @ManyToOne(optional = false)
     private Item idItem;
     
-    @JoinColumn(name = "idlista", referencedColumnName = "idlista")
-    @ManyToOne(optional = false)
     private Lista idlista;
 
     public Itemlista() {

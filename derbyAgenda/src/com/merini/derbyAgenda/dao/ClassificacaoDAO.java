@@ -18,6 +18,7 @@ public class ClassificacaoDAO extends DAOAbstrato
 	private static String JdbcUrl="jdbc:derby:agendaDerby;";//create=true";
 	private String sqlDeletaClassificacao = "DELETE FROM classificacao WHERE nomeclassificacao = '";
 	private String sqlCarregaClassificacao = "SELECT * FROM classificacao WHERE nomeclassificacao = '";
+	private String sqlInsertClassif = "INSERT INTO classificacao(nomeclassificacao, cor, descricao) values ('";
 
 	@Override
 	public Object carregar(String nomeClasssificacao) 
@@ -45,7 +46,7 @@ public class ClassificacaoDAO extends DAOAbstrato
 		{
 			e.printStackTrace();		
 		}
-		return null;
+		return classificacao;
 	}
 	
 
@@ -101,13 +102,13 @@ public class ClassificacaoDAO extends DAOAbstrato
 	public Object gravar(Object entidade) 
 	{
 		Classificacao cl =(Classificacao) entidade;
-		String sqlInsertClassif = "INSERT INTO classificacao(nomeclassificacao, cor, descricao) values ('"
+		sqlInsertClassif = sqlInsertClassif
 				+ cl.getNomeclassificacao()+"', '"+cl.getCor()+"', '"
 				+ cl.getDescricao()+"')";
 		int resultado=0;
 		try 
 		{
-			Connection connection = DriverManager.getConnection(JdbcUrl);
+			Connection connection =conecta();
 				System.out.println("conectado");
 			Statement stmt = connection.createStatement();
 			resultado = stmt.executeUpdate(sqlInsertClassif);

@@ -24,11 +24,19 @@ public class ComandoIncluirClassificacao //implements AbstractCommand
 		{
 			ClassificacaoDAO daoCl = new ClassificacaoDAO();
 			daoCl .gravar(classificacao);
+			reabreJanelaClassificaaco();
 		} 
 		else 
 		{
 			System.out.println("Comando ERRAAdo");
 		}
+	}
+
+	private void reabreJanelaClassificaaco() 
+	{
+		ComandoGerenciaClassificacao comando = new ComandoGerenciaClassificacao();
+		System.out.println("main");
+		comando.processaComando("Cria Janela Gerencia Classificacao");
 	}
 
 	public void processaComando(String comando) 

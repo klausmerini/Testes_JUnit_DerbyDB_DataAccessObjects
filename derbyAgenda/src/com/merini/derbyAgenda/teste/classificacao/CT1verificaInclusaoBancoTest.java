@@ -24,7 +24,7 @@ public class CT1verificaInclusaoBancoTest
 			+ "','Azul Escuro',"
 			+ " '"+descricaoSt+"')";
 	
-	@Test
+//	@Test
 	public void CT1verificaInclusaoBancoTest()
 	{
 		
@@ -49,7 +49,7 @@ public class CT1verificaInclusaoBancoTest
 		verificaInclusao();
 	}
 	
-//	@Test
+	@Test
 	public void verificaInclusao()
 	{		
 		ClassificacaoDAO dao = new ClassificacaoDAO();

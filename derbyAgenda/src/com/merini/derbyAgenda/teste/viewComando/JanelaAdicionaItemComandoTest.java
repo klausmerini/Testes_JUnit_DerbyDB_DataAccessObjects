@@ -7,13 +7,13 @@ import com.merini.derbyAgenda.comando.item.ComandoIncluirItem;
 public class JanelaAdicionaItemComandoTest 
 {
 	ComandoIncluirItem comando;
-	String nomeLista = "";
+	String nomeLista = "Gaveta 1";
 	
 	@Test
 	public void ComandoIncluirItemViewTest()
 	{
 		comando = new ComandoIncluirItem();
-		comando.processaComando("constroi interface adiciona item","Caderno do Monstro");
+		comando.processaComando("constroi interface adiciona item",nomeLista );
 		try {
 			Thread.sleep(10000);	} 
 		catch (InterruptedException e) {	e.printStackTrace();	}

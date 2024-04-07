@@ -28,7 +28,6 @@ public class ClassificacaoDAOTest
 			+ "','Azul Escuro',"
 			+ " '"+descricaoSt+"')";
 	
-	private String sqlCreateTableItem  = "CREATE TABLE item (iditem INT NOT NULL GENERATED ALWAYS AS IDENTITY, nomeitem VARCHAR(70), cor VARCHAR(200), cor VARCHAR(200), descricao VARCHAR(700), PRIMARY KEY(iditem))";
 	private String sqlCreateTableLista  = "";	
 	private String sqlCreateTableItemLista  = "";
 	private static String JdbcUrl="jdbc:derby:agendaDerby;create=true";
